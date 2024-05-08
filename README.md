@@ -40,7 +40,14 @@ El SIPA debe ser capaz de identificar las piezas por medio del reconocimiento de
 
 ## Proceso
 
-![Proceso](img/process.png)
+```mermaid
+flowchart TD
+    A(1. Inicio de sesión y bienvenida) --> B(2. Carga de imagen)
+    B --> C(3. Procesamiento de la imagen)
+    C --> D(4. Identificación y descripción)
+    D --> E(5. Sugerencias de movimientos)
+    E --> F(6. Cierre de sesión o continuación)
+```
 
 1. El usuario carga una imagen de una pieza de ajedrez.
 2. El sistema identifica la pieza de ajedrez y devuelve el nombre de la pieza en español, una descripción de la misma, su valor y su movimiento.
@@ -130,3 +137,4 @@ Diagrama o diagramas en draw.io que permitan visualizar cada uno de los componen
 - [ChessBase](https://en.chessbase.com/post/five-problems-most-new-chess-players-face)
 - [Aperturas de ajedrez](https://chess-site.com/articles/chess-openings/)
 - [Chess.com](https://www.chess.com/learn-how-to-play-chess)
+- Diagramas de flujos con [mermaid.live](https://mermaid.live/)
