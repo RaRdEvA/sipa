@@ -3,6 +3,8 @@
 
 ## Sistema Identificador de Piezas de Ajedrez: La Nueva Herramienta que Transforma el Aprendizaje del Ajedrez para Principiantes y Aficionados
 
+![SIPA](img/banner.png)
+
 El ajedrez, con su rica historia y compleja estrategia, ha sido siempre un juego que desafía tanto la mente como el espíritu competitivo. Sin embargo, aprender y dominar este juego puede ser intimidante debido a la diversidad de movimientos y estrategias que cada pieza de ajedrez posee. Reconociendo este desafío, se ha desarrollado el Sistema Identificador de Piezas de Ajedrez (SIPA), una solución tecnológica diseñada para hacer el ajedrez accesible y comprensible para todos.
 
 "SIPA es un avance revolucionario en la manera en que las personas aprenden y juegan al ajedrez," dijo el Dr. Alejandro Martínez, Director de Innovación de SIPA. "Este sistema no solo enseña a los jugadores a reconocer las piezas y entender sus movimientos, sino que también fomenta una mejor estrategia de juego a través de recomendaciones tácticas adaptadas."

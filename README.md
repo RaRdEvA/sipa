@@ -19,6 +19,8 @@ Por último, sería de gran ayuda que el sistema también pudiera sugerir alguna
 
 ## Descripción de la solución
 
+![SIPA](img/banner.png)
+
 El SIPA (Sistema Identificador de Piezas de Ajedrez) es un programa que permite:
 
 1) Identificar el nombre de una pieza de ajedrez a partir de una imagen.
@@ -40,22 +42,22 @@ El SIPA debe ser capaz de identificar las piezas por medio del reconocimiento de
 
 ## Proceso
 
+El siguiente proceso, hecho en mermaid, describe el flujo de interacción entre el usuario y el sistema:
+
 ```mermaid
 flowchart TD
     A(1. Inicio de sesión y bienvenida) --> B(2. Carga de imagen)
-    B --> C(3. Procesamiento de la imagen)
-    C --> D(4. Identificación y descripción)
-    D --> E(5. Sugerencias de movimientos)
-    E --> F(6. Cierre de sesión o continuación)
+    B --> |El usuario carga una imagen de una pieza de ajedrez|C(3. Procesamiento de la imagen)
+    C --> |El sistema identifica la pieza de ajedrez y devuelve el nombre de la pieza en español, una descripción de la misma, su valor y su movimiento|D(4. Identificación y descripción)
+    D --> |El sistema muestra el nombre de la pieza en español, una descripción de la misma, su valor y su movimiento|E(5. Sugerencias de movimientos)
+    E --> |El sistema sugiere algunas jugadas para principiantes|F(6. Cierre de sesión o continuación)
+      F --> |El usuario puede cargar otra imagen|B
+      F --> |El usuario decide salir|G(7. Salida del sistema)
 ```
 
-1. El usuario carga una imagen de una pieza de ajedrez.
-2. El sistema identifica la pieza de ajedrez y devuelve el nombre de la pieza en español, una descripción de la misma, su valor y su movimiento.
-3. El sistema muestra el nombre de la pieza en español, una descripción de la misma, su valor y su movimiento.
-4. El sistema sugiere algunas jugadas para principiantes.
-5. El usuario puede cargar otra imagen o salir del sistema.
-
 ### Storyboard
+
+A continuation se muestra un storyboard que describe el flujo de interacción entre el usuario y el sistema:
 
 ![Storyboard](img/storyboard.png)
 
