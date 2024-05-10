@@ -1,5 +1,5 @@
 
-# Preguntas Frecuentes (FAQ)
+# FAQ Usuarios
 
 1. **¿Cómo funciona exactamente el Sistema Identificador de Piezas de Ajedrez (SIPA)?**
    - SIPA utiliza avanzadas tecnologías de reconocimiento de imágenes para identificar piezas de ajedrez a partir de fotos cargadas por los usuarios. Una vez identificada la pieza, el sistema proporciona información detallada sobre su nombre, valor, posibles movimientos y sugerencias de jugadas para principiantes.
@@ -23,9 +23,19 @@
    - Además de la identificación y descripción de las piezas, ofrecemos tutoriales interactivos, guías de estrategia y un foro comunitario donde los usuarios pueden intercambiar consejos y aprender unos de otros. Estos recursos están diseñados para ayudar a los principiantes a mejorar rápidamente sus habilidades y confianza en el juego.
 
 8. **¿En qué idiomas está disponible SIPA?**
-   - Actualmente, SIPA está disponible en español e inglés. Estamos trabajando para expandir la disponibilidad a más idiomas en el futuro, para servir mejor a nuestra comunidad global de usuarios de ajedrez.
+   - Actualmente, SIPA está disponible en español. Estamos trabajando para expandir la disponibilidad a más idiomas en el futuro, para servir mejor a nuestra comunidad global de usuarios de ajedrez.
 
 9. **¿Puedo contribuir al desarrollo de SIPA o sugerir mejoras?**
    - ¡Absolutamente! Valoramos enormemente el feedback de nuestra comunidad. Si tienes sugerencias o ideas para mejorar SIPA, por favor visita nuestro sitio web y completa el formulario de contacto. Estamos comprometidos con el desarrollo continuo del sistema basado en las necesidades y recomendaciones de nuestros usuarios.
+
+# FAQ Tecnológico
+
+1. Tecnologías utilizadas
+2. Cómo se utiliza la solución
+3. Cómo se utilizan los datos
+4. Qué tipo de analítica utilizaron, modelos de estadística, ML, simulaciones, etc.
+5. Inputs-Outputs
+6. Cómo se utilizan los outputs.
+7. Cuánto costaría su solución a un año.
 
 [Volver](README.md)

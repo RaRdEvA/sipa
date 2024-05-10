@@ -89,48 +89,75 @@ A continuation se muestra un storyboard que describe el flujo de interacción en
 
 El enfoque "Working Backwards" consta de 3 pasos, a continuación se podrá encontrar cada uno de ellos.
 
-[1. Contestar cinco preguntas centradas en el cliente.](5_questions.md)
+[Comunicado de prensa.](press_release.md)
 
-[2. Elaborar un comunicado de prensa.](press_release.md)
+[Cinco preguntas centradas en el cliente.](5_questions.md)
 
-[3. Redactar una lista de Preguntas Frecuentes (FAQ).](faq.md)
+[Preguntas Frecuentes (FAQ).](faq.md)
 
-## Componentes  CRISP-DM / Well Architected Machine Learning Lens
+## La solución
 
-- Adquisición de datos (tabluar, texto o imágenes)
-- ETLs a la nube (tabluar, texto o imágenes)
+Para ingresar al sistema, pueden hacerlo en la siguiente dirección:
+
+[https://sipa.com](https://sipa.com)
+
+![Código QR](imagen_QR)
+
+## Arquitectura de la solución
+
+![Arquitectura](img/arch.png)
+
+### Componentes  CRISP-DM / Well Architected Machine Learning Lens
+
+- Adquisición de datos
+  - Se lleva a cabo por medio de la carga de imágenes de piezas de ajedrez.
+- ETLs a la nube
+  - Se realiza el procesamiento de las imágenes en la nube.
 - Preprocesamiento de datos (tabluar, texto o imágenes)
+  - SageMaker para identificar el nombre de la pieza. Con un modelo de Deep Learning.
 - Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico.
-- Inferencia de resultados en caso de modelos predictivos (tabluar, texto o imágenes)
-- Despliegue (real-time, batch)
-- Mecanismo para consumir el producto de datos, reporte, dashboard o API o programa de Python.
+  - Notebook en SageMaker para entrenar el modelo y ponerlo en producción.
+- Inferencia de resultados en caso de modelos predictivos.
+  - Devuelve el etiquetado de la pieza de ajedrez.
+  - Devuelve la descripción de la pieza.
+  - Devuelve el valor de la pieza.
+  - Devuelve el movimiento de la pieza.
+  - Devuelve sugerencias de movimientos.
+  - Devuelve ejemplos de imágenes de la misma pieza de ajedrez de distintos modelos, formas y colores.
+- Despliegue
+  - Realtime endpoint en SageMaker para la inferencia.
+  - API Gateway para consumir el modelo.
+  - Lambda para ejecutar el modelo.
+  - S3 para almacenar las imágenes.
+  - CloudWatch para monitorear el sistema.
+  - IAM para gestionar los permisos.
+- Mecanismo para consumir el producto de datos.
+  - Interfaces web para cargar las imágenes y visualizar los resultados.
 
-## Boceto de la solución
+## Presentación ejecutiva
 
-En su caso ya no será un draft, sino ya la solución final, deben mostrar cómo se ve la solución final. En teoría es el resultado de varias iteraciones. (suficiente para entender la idea)
+- Problema u oportunidad.
+- Usuario final y beneficio principal
+- Producto de datos y Working Backwards
+- Arquitectura
+- Datos
+- Demo
 
-# Arquitectura de la solución
+## Estructura del Repo
 
-Diagrama o diagramas en draw.io que permitan visualizar cada uno de los componentes de la solución y cómo estos están relacionados entre si.
+```plaintext
+.
+├── README.md
+├── img
+│   ├── banner.png
+│   ├── arch.png
+│   └── storyboard.png
+|     └── imagen_QR
+├── press_release.md
+├── 5_questions.md
+├── faq.md
 
-## FAQ de la Solución
-
-- Tecnologías utilizadas
-- Cómo se utiliza la solución
-- Cómo se utilizan los datos
-- Qué tipo de analítica utilizaron, modelos de estadística, ML, simulaciones, etc
-- Inputs-Outputs
-- Cómo se utilizan los outputs
-- Cuánto costaría su solución a un año.
-- OJO: Esta lista habla de temas, no son limitativas de las preguntas.
-
-## Presentación ejecutiva de 15 minutos en equipo (solo tienen 15 minutos no más):
-
-    ¿Cuál es el problema o oportunidad?
-    ¿Quién es el usuario final y su beneficio principal con el producto de datos?
-    ¿Cuál es la arquitectura de su solución?
-    ¿Qué datos utilizaron?
-    ¿Demo?
+```
 
 ## Referencias
 
