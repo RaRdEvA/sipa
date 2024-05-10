@@ -3,6 +3,22 @@
 
 2024-05-07 18:45:03
 
+## Tabla de Contenido
+
+- [Sistema Identificador de Piezas de Ajedrez](#sistema-identificador-de-piezas-de-ajedrez)
+  - [Tabla de Contenido](#tabla-de-contenido)
+  - [Descripción del problema](#descripción-del-problema)
+  - [Descripción de la solución](#descripción-de-la-solución)
+  - [Proceso](#proceso)
+    - [Storyboard](#storyboard)
+  - [Working Backwards](#working-backwards)
+  - [La solución](#la-solución)
+  - [Arquitectura de la solución](#arquitectura-de-la-solución)
+    - [Componentes  CRISP-DM / Well Architected Machine Learning Lens](#componentes--crisp-dm--well-architected-machine-learning-lens)
+  - [Presentación ejecutiva](#presentación-ejecutiva)
+  - [Estructura del Repo](#estructura-del-repo)
+  - [Referencias](#referencias)
+
 ## Descripción del problema
 
 El ajedrez es un juego de mesa para dos jugadores que se juega en un tablero de 64 casillas. Cada jugador comienza con 16 piezas: un rey, una reina, dos torres, dos alfiles, dos caballos y ocho peones. El objetivo del juego es dar jaque mate al rey del oponente.
