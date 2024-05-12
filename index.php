@@ -62,5 +62,56 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
     <p><strong>Valor:</strong> <?= $piece['valor'] ?></p>
     <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?></p>
     <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?></p>
+    <table class="infobox" style="text-align: center">
+        <tbody>
+            <tr>
+                <th colspan="3" style="background:#ffce9e;"><a class="mw-selflink selflink">Piezas de ajedrez</a>
+                </th>
+            </tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_klt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/40px-Chess_klt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/60px-Chess_klt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/80px-Chess_klt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Rey_(ajedrez)" title="Rey (ajedrez)">Rey</a> (R)
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_kdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/40px-Chess_kdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/60px-Chess_kdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/80px-Chess_kdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            </tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_qlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/40px-Chess_qlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/60px-Chess_qlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/80px-Chess_qlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Dama_(ajedrez)" title="Dama (ajedrez)">Dama</a> o Reina (D)
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_qdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/40px-Chess_qdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/60px-Chess_qdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/80px-Chess_qdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td></tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_rlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/40px-Chess_rlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/60px-Chess_rlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/80px-Chess_rlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Torre_(ajedrez)" title="Torre (ajedrez)">Torre</a> (T)
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_rdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/40px-Chess_rdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/60px-Chess_rdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/80px-Chess_rdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td></tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_blt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/40px-Chess_blt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/60px-Chess_blt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/80px-Chess_blt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Alfil" title="Alfil">Alfil</a> (A)
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_bdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/40px-Chess_bdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/60px-Chess_bdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/80px-Chess_bdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td></tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_nlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/40px-Chess_nlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/60px-Chess_nlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/80px-Chess_nlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Caballo_(ajedrez)" title="Caballo (ajedrez)">Caballo</a> (C)
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_ndt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/40px-Chess_ndt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/60px-Chess_ndt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/80px-Chess_ndt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td></tr>
+            <tr>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_plt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/40px-Chess_plt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/60px-Chess_plt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/80px-Chess_plt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td>
+            <td style="vertical-align: middle"><a href="/wiki/Pe%C3%B3n_(ajedrez)" title="Peón (ajedrez)">Peón</a>
+            </td>
+            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_pdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/40px-Chess_pdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/60px-Chess_pdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/80px-Chess_pdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
+            </td></tr>
+        </tbody>
+    </table>
 </body>
 </html>
