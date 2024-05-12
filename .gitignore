@@ -7,6 +7,7 @@ kaggle/
 
 # Models
 src/*.h5
+model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
