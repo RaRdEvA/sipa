@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Secrets
+webserver-sipa-kepair.pem
+
+# Images
+./Chessman-image-dataset/
+./kaggle/
+
 # Distribution / packaging
 .Python
 build/
