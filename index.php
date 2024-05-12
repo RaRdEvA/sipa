@@ -28,7 +28,7 @@ $chessPieces = [
             "escaque adversario. Debido a su valor, generalmente se cambia solo por la dama adversaria y su " .
             "sacrificio, en función de otras piezas, son posiciones que normalmente determinan el resultado de la partida.",
         "valor" => "9",
-        "movimiento" => "Cualquier número de casillas en cualquier dirección. Ver <a href='https://upload.wikimedia.org/wikipedia/commons/5/55/Queen_%28chess%29_movements.gif' target='_blank'>animación de movimiento</a>.",
+        "movimiento" => "Cualquier número de casillas en cualquier dirección. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/5/55/Queen_%28chess%29_movements.gif'>",
         "ejemplos" => "Estrategias clave en el medio juego y final."
     ],
     // Add other pieces similarly...
