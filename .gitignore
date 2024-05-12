@@ -7,11 +7,11 @@ __pycache__/
 *.so
 
 # Secrets
-webserver-sipa-kepair.pem
+webserver-sipa-keypair.pem
 
 # Images
-./Chessman-image-dataset/
-./kaggle/
+Chessman-image-dataset/
+kaggle/
 
 # Distribution / packaging
 .Python

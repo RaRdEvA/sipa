@@ -183,3 +183,6 @@ Para ingresar al sistema, pueden hacerlo en la siguiente dirección:
 - [Aperturas de ajedrez](https://chess-site.com/articles/chess-openings/)
 - [Chess.com](https://www.chess.com/learn-how-to-play-chess)
 - Diagramas de flujos con [mermaid.live](https://mermaid.live/)
+- [Chess Piece Classifier](https://github.com/DenverCoder1/chess-piece-classifier?)
+- [Image classification with TensorFlow Lite Model Maker](https://www.tensorflow.org/lite/models/modify/model_maker/image_classification)
+- [Chess Pieces Image Classifier| VGG16 | KFold ♟️](https://www.kaggle.com/code/amankumar234/chess-pieces-image-classifier-vgg16-kfold/notebook)
