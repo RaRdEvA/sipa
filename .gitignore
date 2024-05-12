@@ -1,3 +1,13 @@
+# Secrets
+webserver-sipa-keypair.pem
+
+# Images
+Chessman-image-dataset/
+kaggle/
+
+# Models
+src/*.h5
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,13 +15,6 @@ __pycache__/
 
 # C extensions
 *.so
-
-# Secrets
-webserver-sipa-keypair.pem
-
-# Images
-Chessman-image-dataset/
-kaggle/
 
 # Distribution / packaging
 .Python
