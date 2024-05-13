@@ -98,7 +98,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         }
         table {
             margin: 20px auto;
-            width: 80%;
+            width: 40%;
             border-collapse: collapse;
         }
         th, td {
