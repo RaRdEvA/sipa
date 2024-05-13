@@ -116,6 +116,12 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             border: 1px solid #dddddd;
             box-shadow: 0px 0px 10px 0px #aaaaaa;
         }
+
+        img, iframe {
+            max-width: 100%; /* Esto hace que la imagen o vídeo nunca sea más grande que su contenedor */
+            height: auto; /* Mantiene la proporción de aspecto de la imagen o vídeo */
+        }
+
     </style>
 </head>
 <body>
