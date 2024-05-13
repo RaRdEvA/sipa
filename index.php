@@ -84,13 +84,13 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             text-align: center;
         }
         .header {
-            background-image: url('/img/banner.png'); /* Asegúrate de que la ruta es correcta */
-            background-size: contain; /* Ajusta la imagen para que se contenga completamente dentro del div */
-            background-position: center center; /* Centra la imagen tanto vertical como horizontalmente */
-            background-repeat: no-repeat; /* No repetir la imagen */
-            height: 240px; /* Establece una altura que consideres adecuada */
-            width: 100%; /* Ancho del banner */
-            margin-bottom: 20px; /* Espacio después del banner */
+            background-image: url('/img/banner.png');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 240px;
+            width: 100%;
+            margin-bottom: 20px;
         }
         .content {
             margin: auto;
@@ -98,7 +98,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         }
         table {
             margin: 20px auto;
-            width: 40%;
+            width: 50%;
             border-collapse: collapse;
         }
         th, td {
