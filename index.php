@@ -5,7 +5,7 @@ $chessPieces = [
         "nombre" => "Rey",
         "descripcion" => "El rey puede moverse en cualquier dirección, pero solo una casilla a la vez.",
         "valor" => "Infinito, pues sin él el juego termina.",
-        "movimiento" => "Una casilla en cualquier dirección. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/f/f2/King_%28chess%29_movements.gif'>",
+        "movimiento" => "Una casilla en cualquier dirección. <br /><img src='./img/moves_King.gif'>",
         "ejemplos" => "Movimiento del rey en situaciones de jaque.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/y97bULMvfXQ?si=a5gIooZ2BwGl1QQI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Queen" => [
@@ -15,8 +15,8 @@ $chessPieces = [
             "hispana y portuguesa por la letra D en la notación algebraica. Es la pieza de mayor valor absoluto " .
             "del juego, valorada con nueve puntos.",
         "valor" => "9",
-        "movimiento" => "Cualquier número de casillas en cualquier dirección. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/5/55/Queen_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IJxT5I2QadI?si=Yi9f-lTt_mx0Q7zv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
+        "movimiento" => "Cualquier número de casillas en cualquier dirección. <br /><img src='img/moves_Queen.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IJxT5I2QadI?si=Yi9f-lTt_mx0Q7zv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Rook" => [
         "nombre" => "Torre",
@@ -24,9 +24,8 @@ $chessPieces = [
             "verticalmente cualquier número de escaques. Representada en los países de habla hispana y portuguesa " .
             "por la letra T en la notación algebraica. Su valor es de cinco puntos.",
         "valor" => "5",
-        "movimiento" => "Cualquier número de casillas en horizontal o vertical. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/7/72/Rook_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=8
-        1Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        "movimiento" => "Cualquier número de casillas en horizontal o vertical. <br /><img src='img/moves_Rook.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mqY2Oo1K8nk?si=wiiCEmoRdh3VaCqO\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Bishop" => [
         "nombre" => "Alfil",
@@ -34,8 +33,8 @@ $chessPieces = [
             "cualquier número de escaques. Representada en los países de habla hispana y portuguesa por la letra A " .
             "en la notación algebraica. Su valor es de tres puntos.",
         "valor" => "3",
-        "movimiento" => "Cualquier número de casillas en diagonal. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/9/9b/Bishop_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        "movimiento" => "Cualquier número de casillas en diagonal. <br /><img src='img/moves_Bishop.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/EQPIpaQPwwc?si=05XZIHuUtTW6R0kH\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Knight" => [
         "nombre" => "Caballo",
@@ -43,8 +42,8 @@ $chessPieces = [
             "L, dos escaques en una dirección y uno en la otra. Representada en los países de habla hispana y " .
             "portuguesa por la letra C en la notación algebraica. Su valor es de tres puntos.",
         "valor" => "3",
-        "movimiento" => "Forma de L, dos casillas en una dirección y una en la otra. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/2/28/Knight_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        "movimiento" => "Forma de L, dos casillas en una dirección y una en la otra. <br /><img src='img/moves_Knight.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MVYgN1tf8yY?si=uBkO3noDwCa9ASh8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Pawn" => [
         "nombre" => "Peón",
@@ -52,8 +51,8 @@ $chessPieces = [
             "una casilla, pero captura en diagonal. Representada en los países de habla hispana y portuguesa por " .
             "la letra P en la notación algebraica. Su valor es de un punto.",
         "valor" => "1",
-        "movimiento" => "Una casilla hacia adelante, pero captura en diagonal. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/4/45/Pawn_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        "movimiento" => "Una casilla hacia adelante, pero captura en diagonal. <br /><img src='img/moves_Pawn.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/E_aQXe22ozY?si=PcQJ7L0MRbiW4q4w\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ]
 ];
 
