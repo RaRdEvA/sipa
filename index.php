@@ -138,6 +138,25 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             <?php
                 // PHP logic to display chess piece information
             ?>
+
+        <!-- Upload form -->
+        <form action="#" onsubmit="return false" class="card">
+            <!-- File upload -->
+            <input type="file" class="image-upload" accept="image/*">
+            <!-- Image preview -->
+            <img src="assets/chess-piece.jpg" alt="input image" crossOrigin="anonymous" />
+            <!-- Submit button -->
+            <button type="submit" class="trigger btn-primary btn-lg btn-block">Loading...</button>
+        </form>
+
+        <!-- Prediction -->
+        <div class="results card hide">
+            <h3>My prediction:</h3>
+            <h1 class="prediction"></h1>
+            <p class="likelihoods"></p>
+        </div>
+
+
         <p>Selecciona una pieza de ajedrez para obtener más información:</p>
             <table class="infobox" style="text-align: center">
                 <tbody>
