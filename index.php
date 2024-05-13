@@ -129,7 +129,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
     <div class="content">
         <h1>Bienvenido al SIPA</h1>
         <p>El Sistema Identificador de Piezas de Ajedrez (SIPA) te proporciona información detallada sobre las piezas de ajedrez.</p>
-        <p>Carga una Pieza de Ajedrez para identificarla y obtener máx información.</p>
+        <p>Carga una Pieza de Ajedrez para identificarla y obtener más información.</p>
         <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) . '?piece=' . urlencode($_GET['piece'] ?? ''); ?>" method="post" enctype="multipart/form-data">
             <h2>Cargar imagen de pieza</h2>
             <input type="file" name="chessImage" required>
