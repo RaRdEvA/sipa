@@ -4,34 +4,57 @@ $chessPieces = [
     "King" => [
         "nombre" => "Rey",
         "descripcion" => "El rey puede moverse en cualquier dirección, pero solo una casilla a la vez.",
-        "valor" => "Infinito",
-        "movimiento" => "Una casilla en cualquier dirección",
-        "ejemplos" => "Movimiento del rey en situaciones de jaque."
+        "valor" => "Infinito, pues sin él el juego termina.",
+        "movimiento" => "Una casilla en cualquier dirección. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/f/f2/King_%28chess%29_movements.gif'>",
+        "ejemplos" => "Movimiento del rey en situaciones de jaque.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/y97bULMvfXQ?si=a5gIooZ2BwGl1QQI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     ],
     "Queen" => [
         "nombre" => "Reina",
         "descripcion" => "La dama (♕♛) es una pieza mayor del juego de ajedrez; se puede mover vertical, " .
             "horizontal o diagonalmente cualquier número de escaques. Representada en los países de habla " .
             "hispana y portuguesa por la letra D en la notación algebraica. Es la pieza de mayor valor absoluto " .
-            "del juego, valorada con nueve puntos. En el chaturanga y shatranj, antecesores más antiguos de " .
-            "ajedrez, el lugar de la dama era ocupado por la firzan o firz, equivalente al visir o consejero real. " .
-            "En Europa, durante la Edad Media, la dama sustituyó poco a poco su antecesor, a pesar de que los " .
-            "movimientos sean los mismos, y ya en el final del siglo XIII estuvo presente en todo el continente. " .
-            "A finales del siglo XV, su movimiento se expandió alcanzando vigente hasta el siglo XXI, aunque " .
-            "todavía se restringían las condiciones de promoción de un peón a una nueva dama. Normalmente no se " .
-            "utiliza en la fase de apertura del juego, por estar sujeta a ataques de las piezas menores en " .
-            "posiciones cerradas, aunque haya aperturas clasificadas en The Encyclopaedia of Chess Openings " .
-            "(Enciclopedia de aperturas de ajedrez) con su prematura utilización. En las fases de medio juego y " .
-            "final, se vuelve extremadamente útil, ya que se utiliza con facilidad en tácticas como el tenedor " .
-            "y el pincho. La dama se mueve en línea recta por las filas, columnas y diagonales en el tablero. " .
-            "No puede saltar a sus propias piezas o las adversarias y captura tomando el escaque ocupado por el " .
-            "escaque adversario. Debido a su valor, generalmente se cambia solo por la dama adversaria y su " .
-            "sacrificio, en función de otras piezas, son posiciones que normalmente determinan el resultado de la partida.",
+            "del juego, valorada con nueve puntos.",
         "valor" => "9",
         "movimiento" => "Cualquier número de casillas en cualquier dirección. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/5/55/Queen_%28chess%29_movements.gif'>",
-        "ejemplos" => "Estrategias clave en el medio juego y final."
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IJxT5I2QadI?si=Yi9f-lTt_mx0Q7zv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>
     ],
-    // Add other pieces similarly...
+    "Rook" => [
+        "nombre" => "Torre",
+        "descripcion" => "La torre (♖♜) es una pieza mayor del juego de ajedrez; se puede mover horizontal o " .
+            "verticalmente cualquier número de escaques. Representada en los países de habla hispana y portuguesa " .
+            "por la letra T en la notación algebraica. Su valor es de cinco puntos.",
+        "valor" => "5",
+        "movimiento" => "Cualquier número de casillas en horizontal o vertical. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/7/72/Rook_%28chess%29_movements.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=8
+        1Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
+    "Bishop" => [
+        "nombre" => "Alfil",
+        "descripcion" => "El alfil (♗♝) es una pieza menor del juego de ajedrez; se puede mover en diagonal " .
+            "cualquier número de escaques. Representada en los países de habla hispana y portuguesa por la letra A " .
+            "en la notación algebraica. Su valor es de tres puntos.",
+        "valor" => "3",
+        "movimiento" => "Cualquier número de casillas en diagonal. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/9/9b/Bishop_%28chess%29_movements.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
+    "Knight" => [
+        "nombre" => "Caballo",
+        "descripcion" => "El caballo (♘♞) es una pieza menor del juego de ajedrez; se puede mover en forma de " .
+            "L, dos escaques en una dirección y uno en la otra. Representada en los países de habla hispana y " .
+            "portuguesa por la letra C en la notación algebraica. Su valor es de tres puntos.",
+        "valor" => "3",
+        "movimiento" => "Forma de L, dos casillas en una dirección y una en la otra. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/2/28/Knight_%28chess%29_movements.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
+    "Pawn" => [
+        "nombre" => "Peón",
+        "descripcion" => "El peón (♙♟) es una pieza menor del juego de ajedrez; se puede mover hacia adelante " .
+            "una casilla, pero captura en diagonal. Representada en los países de habla hispana y portuguesa por " .
+            "la letra P en la notación algebraica. Su valor es de un punto.",
+        "valor" => "1",
+        "movimiento" => "Una casilla hacia adelante, pero captura en diagonal. <br /><img src='https://upload.wikimedia.org/wikipedia/commons/4/45/Pawn_%28chess%29_movements.gif'>",
+        "ejemplos" => "Estrategias clave en el medio juego y final.<br /><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Z6n8J8f1Zk?si=81Z6n8J8f1Zk?si=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ]
 ];
 
 // Check if the 'piece' URL parameter is set and exists in our array
@@ -57,61 +80,109 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
 </head>
 <body>
     <h1>Bienvenido al SIPA</h1>
+    <table class="infobox" style="text-align: center">
+        <tbody>
+            <tr>
+                <th colspan="3" style="background:#ffce9e;">Piezas de ajedrez y sus símbolos</th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/40px-Chess_klt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/60px-Chess_klt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/80px-Chess_klt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=King" title="Rey (ajedrez)">Rey</a> (R)
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/40px-Chess_kdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/60px-Chess_kdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/80px-Chess_kdt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/40px-Chess_qlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/60px-Chess_qlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/80px-Chess_qlt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=Queen" title="Dama (ajedrez)">Dama</a> o Reina (D)
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/40px-Chess_qdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/60px-Chess_qdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/80px-Chess_qdt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/40px-Chess_rlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/60px-Chess_rlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/80px-Chess_rlt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=Rook" title="Torre (ajedrez)">Torre</a> (T)
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/40px-Chess_rdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/60px-Chess_rdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/80px-Chess_rdt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/40px-Chess_blt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/60px-Chess_blt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/80px-Chess_blt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=Bishop" title="Alfil">Alfil</a> (A)
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/40px-Chess_bdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/60px-Chess_bdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/80px-Chess_bdt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/40px-Chess_nlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/60px-Chess_nlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/80px-Chess_nlt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=Knight" title="Caballo (ajedrez)">Caballo</a> (C)
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/40px-Chess_ndt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/60px-Chess_ndt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/80px-Chess_ndt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/40px-Chess_plt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/60px-Chess_plt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/80px-Chess_plt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+                <td style="vertical-align: middle">
+                    <a href="index.php?piece=Pawn" title="Peón (ajedrez)">Peón</a>
+                </td>
+                <td>
+                    <span typeof="mw:File">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/40px-Chess_pdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/60px-Chess_pdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/80px-Chess_pdt45.svg.png 2x" data-file-width="45" data-file-height="45">
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <h2>Pieza: <?= $piece['nombre'] ?></h2>
     <p><strong>Descripción:</strong> <?= $piece['descripcion'] ?></p>
     <p><strong>Valor:</strong> <?= $piece['valor'] ?></p>
     <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?></p>
     <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?></p>
-    <table class="infobox" style="text-align: center">
-        <tbody>
-            <tr>
-                <th colspan="3" style="background:#ffce9e;"><a class="mw-selflink selflink">Piezas de ajedrez</a>
-                </th>
-            </tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_klt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/40px-Chess_klt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/60px-Chess_klt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/80px-Chess_klt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Rey_(ajedrez)" title="Rey (ajedrez)">Rey</a> (R)
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_kdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/40px-Chess_kdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/60px-Chess_kdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/80px-Chess_kdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            </tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_qlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/40px-Chess_qlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/60px-Chess_qlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/80px-Chess_qlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Dama_(ajedrez)" title="Dama (ajedrez)">Dama</a> o Reina (D)
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_qdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/40px-Chess_qdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/60px-Chess_qdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/80px-Chess_qdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td></tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_rlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/40px-Chess_rlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/60px-Chess_rlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/80px-Chess_rlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Torre_(ajedrez)" title="Torre (ajedrez)">Torre</a> (T)
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_rdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/40px-Chess_rdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/60px-Chess_rdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/80px-Chess_rdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td></tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_blt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/40px-Chess_blt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/60px-Chess_blt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/80px-Chess_blt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Alfil" title="Alfil">Alfil</a> (A)
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_bdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/40px-Chess_bdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/60px-Chess_bdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/80px-Chess_bdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td></tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_nlt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/40px-Chess_nlt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/60px-Chess_nlt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/80px-Chess_nlt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Caballo_(ajedrez)" title="Caballo (ajedrez)">Caballo</a> (C)
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_ndt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/40px-Chess_ndt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/60px-Chess_ndt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/80px-Chess_ndt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td></tr>
-            <tr>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_plt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/40px-Chess_plt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/60px-Chess_plt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/80px-Chess_plt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td>
-            <td style="vertical-align: middle"><a href="/wiki/Pe%C3%B3n_(ajedrez)" title="Peón (ajedrez)">Peón</a>
-            </td>
-            <td><span typeof="mw:File"><a href="/wiki/Archivo:Chess_pdt45.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/40px-Chess_pdt45.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/60px-Chess_pdt45.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/80px-Chess_pdt45.svg.png 2x" data-file-width="45" data-file-height="45"></a></span>
-            </td></tr>
-        </tbody>
-    </table>
+
 </body>
 </html>
