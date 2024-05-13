@@ -124,11 +124,11 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         <h1>Bienvenido al SIPA</h1>
         <p>El Sistema Identificador de Piezas de Ajedrez (SIPA) te proporciona información detallada sobre las piezas de ajedrez.</p>
         <p>Carga una Pieza de Ajedrez para identificarla y obtener máx información.</p>
-            <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
-                <h2>Cargar imagen de pieza</h2>
-                <input type="file" name="chessImage" required>
-                <button type="submit">Enviar imagen</button>
-            </form>
+        <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) . '?piece=' . urlencode($_GET['piece'] ?? ''); ?>" method="post" enctype="multipart/form-data">
+            <h2>Cargar imagen de pieza</h2>
+            <input type="file" name="chessImage" required>
+            <button type="submit">Enviar imagen</button>
+        </form>
             <?php
                 // PHP logic to display chess piece information
             ?>
@@ -236,6 +236,19 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         <p><strong>Valor:</strong> <?= $piece['valor'] ?? 'No disponible' ?></p>
         <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?? 'No disponible' ?></p>
         <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?? 'No disponible' ?></p>
+
+        <!-- Botón para volver al inicio de la página -->
+        <button onclick="topFunction()" id="myBtn" title="Ir arriba" style="position: fixed; bottom: 20px; right: 30px; z-index: 99; font-size: 18px; border: none; outline: none; background-color: red; color: white; cursor: pointer; padding: 15px; border-radius: 4px;">
+        Ir arriba
+        </button>
+
     </div>
+    <script>
+    // Cuando el usuario haga clic en el botón, se desplaza hacia arriba del documento
+    function topFunction() {
+        document.body.scrollTop = 0; // Para Safari
+        document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    }
+    </script>
 </body>
 </html>
