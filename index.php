@@ -74,33 +74,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
-
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Piece Classifier</title>
-    <!-- Custom styling -->
-    <link rel="stylesheet" href="assets/style.css">
-    <!-- Tensorflow.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.3/dist/tf-tflite.min.js"></script>
-    <!-- Image classification script -->
-    <script src="assets/script.js" type="text/javascript"></script>
-    <!-- Bootstrap compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <!-- Jquery for Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-
-
     <title>SIPA - Sistema Identificador de Piezas de Ajedrez</title>
     <style>
         body {
@@ -152,15 +126,10 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
 </head>
 <body>
 <div class="header"></div>
-
     <div class="content">
-
         <h1>Bienvenido al SIPA</h1>
-
         <p>El Sistema Identificador de Piezas de Ajedrez (SIPA) te proporciona información detallada sobre las piezas de ajedrez.</p>
-
         <p>Carga una Pieza de Ajedrez para identificarla y obtener más información.</p>
-
         <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) . '?piece=' . urlencode($_GET['piece'] ?? ''); ?>" method="post" enctype="multipart/form-data">
             <h2>Cargar imagen de pieza</h2>
             <input type="file" name="chessImage" required>
@@ -169,7 +138,6 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             <?php
                 // PHP logic to display chess piece information
             ?>
-
         <p>Selecciona una pieza de ajedrez para obtener más información:</p>
             <table class="infobox" style="text-align: center">
                 <tbody>
@@ -270,13 +238,9 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
                 </tbody>
             </table>
         <h2>Pieza: <?= $piece['nombre'] ?? 'No especificada' ?></h2>
-
         <p><strong>Descripción:</strong> <?= $piece['descripcion'] ?? 'No disponible' ?></p>
-
         <p><strong>Valor:</strong> <?= $piece['valor'] ?? 'No disponible' ?></p>
-
         <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?? 'No disponible' ?></p>
-
         <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?? 'No disponible' ?></p>
 
         <!-- Botón para volver al inicio de la página -->
@@ -285,7 +249,6 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         </button>
 
     </div>
-
     <script>
     // Cuando el usuario haga clic en el botón, se desplaza hacia arriba del documento
     function topFunction() {
@@ -293,6 +256,5 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
     }
     </script>
-
 </body>
 </html>
