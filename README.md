@@ -7,6 +7,7 @@
 
 - [Sistema Identificador de Piezas de Ajedrez](#sistema-identificador-de-piezas-de-ajedrez)
   - [Tabla de Contenido](#tabla-de-contenido)
+  - [Equipo](#equipo)
   - [Descripción del problema](#descripción-del-problema)
   - [Descripción de la solución](#descripción-de-la-solución)
   - [Proceso](#proceso)
@@ -15,9 +16,20 @@
   - [La solución](#la-solución)
   - [Arquitectura de la solución](#arquitectura-de-la-solución)
     - [Componentes  CRISP-DM / Well Architected Machine Learning Lens](#componentes--crisp-dm--well-architected-machine-learning-lens)
+  - [Modelo de Deep Learning](#modelo-de-deep-learning)
+  - [Arquitectura de Red Neuronal](#arquitectura-de-red-neuronal)
   - [Presentación ejecutiva](#presentación-ejecutiva)
   - [Estructura del Repo](#estructura-del-repo)
   - [Referencias](#referencias)
+
+## Equipo
+
+Este trabajo fue realizado por:
+
+|Nombre|Matrícula|Correo
+|-|-|-
+|Horus Ordoñez Bello|214481|horus.act@gmail.com
+|Javier Castillo Millán|169589|rardeva@yahoo.com
 
 ## Descripción del problema
 
@@ -115,9 +127,9 @@ El enfoque "Working Backwards" consta de 3 pasos, a continuación se podrá enco
 
 Para ingresar al sistema, pueden hacerlo en la siguiente dirección:
 
-[https://sipa.com](https://sipa.com)
+[http://3.89.113.93/index.php?piece=Queen](http://3.89.113.93/index.php?piece=Queen)
 
-![Código QR](imagen_QR)
+![Código QR](./img/QR.png)
 
 ## Arquitectura de la solución
 
@@ -125,30 +137,103 @@ Para ingresar al sistema, pueden hacerlo en la siguiente dirección:
 
 ### Componentes  CRISP-DM / Well Architected Machine Learning Lens
 
-- Adquisición de datos
+- **Adquisición de datos**
   - Se lleva a cabo por medio de la carga de imágenes de piezas de ajedrez.
-- ETLs a la nube
+  - Esto es a través de la página web en la cual el usuario puede cargar la imagen.
+  - La imagen es cargada en el servidor y se envía al modelo por medio de una API.
+- **ETLs a la nube**
   - Se realiza el procesamiento de las imágenes en la nube.
-- Preprocesamiento de datos (tabluar, texto o imágenes)
+  - Esto se lleva a cabo gracias a una API.
+- **Preprocesamiento de datos**
+  - Se hace una conversión de la imagen hacia un vector para enviar por medio de la API al modelo.
   - SageMaker para identificar el nombre de la pieza. Con un modelo de Deep Learning.
-- Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico.
+- **Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico**
   - Notebook en SageMaker para entrenar el modelo y ponerlo en producción.
-- Inferencia de resultados en caso de modelos predictivos.
-  - Devuelve el etiquetado de la pieza de ajedrez.
-  - Devuelve la descripción de la pieza.
-  - Devuelve el valor de la pieza.
-  - Devuelve el movimiento de la pieza.
-  - Devuelve sugerencias de movimientos.
-  - Devuelve ejemplos de imágenes de la misma pieza de ajedrez de distintos modelos, formas y colores.
-- Despliegue
+- **Inferencia de resultados en caso de modelos predictivos**
+  - Se lleva a cabo por medio de un modelo que fue creado en Jupyter.
+  - Este modelo realizad transfer learning para usar una red neuronal preentrenada.
+  - Esta red acelera el entrenamiento y mejora la precisión.
+- **Despliegue**
   - Realtime endpoint en SageMaker para la inferencia.
   - API Gateway para consumir el modelo.
   - Lambda para ejecutar el modelo.
   - S3 para almacenar las imágenes.
   - CloudWatch para monitorear el sistema.
   - IAM para gestionar los permisos.
-- Mecanismo para consumir el producto de datos.
+- **Mecanismo para consumir el producto de datos**
   - Interfaces web para cargar las imágenes y visualizar los resultados.
+
+## Modelo de Deep Learning
+
+El modelo de Deep Learning utilizado para el reconocimiento de imágenes es un modelo de transfer learning basado en la arquitectura VGG16. Este modelo fue entrenado con un dataset de imágenes de piezas de ajedrez y es capaz de identificar las 6 piezas de ajedrez.
+
+Puede consultarse en este vínculo: [chess-pieces-image-classifier.ipynb](../src/chess-pieces-image-classifier.ipynb)
+
+## Arquitectura de Red Neuronal
+
+La arquitectura de la red neuronal utilizada para el reconocimiento de imágenes es la siguiente:
+
+```plaintext
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0         
+                                                                 
+ flatten (Flatten)           (None, 25088)             0         
+                                                                 
+ dense (Dense)               (None, 512)               12845568  
+                                                                 
+ dropout (Dropout)           (None, 512)               0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               65664     
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_2 (Dense)             (None, 6)                 774       
+                                                                 
+=================================================================
+Total params: 27626694 (105.39 MB)
+Trainable params: 12912006 (49.26 MB)
+Non-trainable params: 14714688 (56.13 MB)
+_________________________________________________________________
+```
 
 ## Presentación ejecutiva
 
