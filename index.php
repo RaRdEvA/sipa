@@ -84,7 +84,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             text-align: center;
         }
         .header {
-            background-image: url('/src/banner.png'); /* Asegúrate de que la ruta es correcta */
+            background-image: url('/img/banner.png'); /* Asegúrate de que la ruta es correcta */
             background-size: contain; /* Ajusta la imagen para que se contenga completamente dentro del div */
             background-position: center center; /* Centra la imagen tanto vertical como horizontalmente */
             background-repeat: no-repeat; /* No repetir la imagen */
