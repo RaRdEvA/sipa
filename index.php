@@ -220,7 +220,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
                     </tr>
                 </tbody>
             </table>
-            <form class="form-upload" action="/path-to-your-upload-handler" method="post" enctype="multipart/form-data">
+            <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
                 <h2>Cargar imagen de pieza</h2>
                 <input type="file" name="chessImage" required>
                 <button type="submit">Enviar imagen</button>
