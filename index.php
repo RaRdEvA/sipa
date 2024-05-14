@@ -99,6 +99,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             color: black; /* Color de texto negro para el contenido */
             margin: auto;
             width: 80%;
+            max-width: 800px; 
             padding: 20px; /* Añade algo de padding alrededor del contenido */
             box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra sutil para el contenido */
         }
