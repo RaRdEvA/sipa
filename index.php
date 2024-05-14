@@ -82,6 +82,8 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             margin: 0;
             padding: 0;
             text-align: center;
+            background-color: black; /* Fondo negro para todo el cuerpo de la página */
+            color: white; /* Cambia el color del texto a blanco para contraste */
         }
         .header {
             background-image: url('/img/banner.png');
@@ -93,8 +95,12 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             margin-bottom: 20px;
         }
         .content {
+            background-color: white; /* Fondo blanco para el div de contenido */
+            color: black; /* Color de texto negro para el contenido */
             margin: auto;
             width: 80%;
+            padding: 20px; /* Añade algo de padding alrededor del contenido */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra sutil para el contenido */
         }
         table {
             margin: 20px auto;
@@ -116,12 +122,10 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             border: 1px solid #dddddd;
             box-shadow: 0px 0px 10px 0px #aaaaaa;
         }
-
         img, iframe {
-            max-width: 100%; /* Esto hace que la imagen o vídeo nunca sea más grande que su contenedor */
-            height: auto; /* Mantiene la proporción de aspecto de la imagen o vídeo */
+            max-width: 100%;
+            height: auto;
         }
-
     </style>
 </head>
 <body>
