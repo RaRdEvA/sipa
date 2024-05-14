@@ -90,6 +90,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
+            background-color: white; /* Fondo blanco para el encabezado */
             height: 240px;
             width: 100%;
             margin-bottom: 20px;
