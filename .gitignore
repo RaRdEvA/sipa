@@ -18,6 +18,9 @@ src/image_classification.ipynb
 src/model_jcm_01.ipynb
 src/pre-trained-imagenet.ipynb
 
+# Assets
+assets/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

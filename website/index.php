@@ -75,6 +75,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIPA - Sistema Identificador de Piezas de Ajedrez</title>
     <style>
         body {
@@ -135,14 +136,20 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
         <h1>Bienvenido al SIPA</h1>
         <p>El Sistema Identificador de Piezas de Ajedrez (SIPA) te proporciona información detallada sobre las piezas de ajedrez.</p>
         <p>Carga una Pieza de Ajedrez para identificarla y obtener más información.</p>
-        <form class="form-upload" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) . '?piece=' . urlencode($_GET['piece'] ?? ''); ?>" method="post" enctype="multipart/form-data">
-            <h2>Cargar imagen de pieza</h2>
-            <input type="file" name="chessImage" required>
-            <button type="submit">Enviar imagen</button>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+		<h2>Cargar imagen de pieza</h2>
+		<input type="file" name="image" required>
+		<button type="submit">Enviar imagen</button>
         </form>
-            <?php
-                // PHP logic to display chess piece information
-            ?>
+	    <?php
+        	echo "<p>Pieza Identificada: " . $piece['nombre'] . "</p>";
+	    ?>
+        <h2>Pieza: <?= $piece['nombre'] ?? 'No especificada' ?></h2>
+        <p><strong>Descripción:</strong> <?= $piece['descripcion'] ?? 'No disponible' ?></p>
+        <p><strong>Valor:</strong> <?= $piece['valor'] ?? 'No disponible' ?></p>
+        <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?? 'No disponible' ?></p>
+        <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?? 'No disponible' ?></p>
+
         <p>Selecciona una pieza de ajedrez para obtener más información:</p>
             <table class="infobox" style="text-align: center">
                 <tbody>
@@ -242,11 +249,6 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
                     </tr>
                 </tbody>
             </table>
-        <h2>Pieza: <?= $piece['nombre'] ?? 'No especificada' ?></h2>
-        <p><strong>Descripción:</strong> <?= $piece['descripcion'] ?? 'No disponible' ?></p>
-        <p><strong>Valor:</strong> <?= $piece['valor'] ?? 'No disponible' ?></p>
-        <p><strong>Movimiento:</strong> <?= $piece['movimiento'] ?? 'No disponible' ?></p>
-        <p><strong>Estrategias para principiantes:</strong> <?= $piece['ejemplos'] ?? 'No disponible' ?></p>
 
         <!-- Botón para volver al inicio de la página -->
         <button onclick="topFunction()" id="myBtn" title="Ir arriba" style="position: fixed; bottom: 20px; right: 30px; z-index: 99; font-size: 18px; border: none; outline: none; background-color: red; color: white; cursor: pointer; padding: 15px; border-radius: 4px;">
