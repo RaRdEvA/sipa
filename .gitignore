@@ -6,8 +6,9 @@ Chessman-image-dataset/
 kaggle/
 
 # Models
-src/*.h5
 model/
+model/*.h5
+model/*.tflite
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
