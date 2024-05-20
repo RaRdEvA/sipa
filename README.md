@@ -10,6 +10,7 @@
   - [Equipo](#equipo)
   - [Descripción del problema](#descripción-del-problema)
   - [Descripción de la solución](#descripción-de-la-solución)
+  - Usuario Final y su beneficio principal con el producto de datos(#usuario-Final-Beneficio)
   - [Proceso](#proceso)
     - [Storyboard](#storyboard)
   - [Working Backwards](#working-backwards)
