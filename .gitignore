@@ -10,6 +10,14 @@ model/
 model/*.h5
 model/*.tflite
 
+# Source
+src/chess-classification-and-image-preprocessing.ipynb
+src/chess-pieces-image-classifier - OK.ipynb
+src/chess-pieces-image-classifier-vgg16-kfold.ipynb
+src/image_classification.ipynb
+src/model_jcm_01.ipynb
+src/pre-trained-imagenet.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
