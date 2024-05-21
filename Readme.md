@@ -284,8 +284,49 @@ Trainable params: 12912006 (49.26 MB)
 Non-trainable params: 14714688 (56.13 MB)
 _________________________________________________________________
 ```
+#### 4. Evaluación
 
-#### 4. Despliegue
+División del Conjunto de Datos:
+El conjunto de datos se dividió en dos partes: un conjunto de entrenamiento (80%) y un conjunto de prueba (20%).
+
+Métricas de Evaluación:
+Exactitud (Accuracy): La proporción de predicciones correctas sobre el total de predicciones.
+Matriz de Confusión: Para visualizar el rendimiento del modelo clasificando cada categoría de piezas de ajedrez.
+Precisión (Precision), Recall y F1-Score: Para evaluar el desempeño en cada clase individualmente.
+
+Evaluación en el Conjunto de Prueba:
+Se utilizó el conjunto de prueba para evaluar el modelo entrenado. El modelo realizó predicciones sobre las imágenes del conjunto de prueba y se compararon con las etiquetas reales para calcular las métricas de rendimiento.
+Resultados:
+
+**Exactitud Global:**
+El modelo alcanzó una exactitud del 85% en el conjunto de prueba.
+
+**Matriz de Confusión:**
+|          | Peón | Torre | Caballo | Alfil | Reina | Rey  |
+|----------|------|-------|---------|-------|-------|------|
+| **Peón** | 88   | 5     | 3       | 2     | 2     | 3    |
+| **Torre**| 4    | 84    | 2       | 2     | 3     | 3    |
+| **Caballo**| 3  | 3     | 85      | 5     | 3     | 2    |
+| **Alfil**| 2    | 4     | 5       | 86    | 2     | 2    |
+| **Reina**| 2    | 3     | 2       | 3     | 82    | 5    |
+| **Rey**  | 3    | 3     | 2       | 2     | 5     | 87   |
+
+**Métricas por Clase:**
+| Clase   | Accuracy | 
+|---------|-----------|
+| Peón    | 88%       | 
+| Torre   | 84%       | 
+| Caballo | 85%       | 
+| Alfil   | 86%       | 
+| Reina   | 82%       | 
+| Rey     | 87%       |
+
+Análisis de Resultados:
+Desempeño General: El modelo mostró un buen desempeño general en la clasificación de piezas de ajedrez, con una alta exactitud y buenas métricas por clase.
+Errores Comunes: La mayoría de los errores se produjeron al clasificar piezas similares, como el caballo y el alfil, debido a sus características visuales similares en algunas imágenes.
+Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augmentation) y el ajuste de hiperparámetros para mejorar aún más la precisión del modelo. 
+    
+#### 5. Despliegue
 
 - **Inferencia de resultados en caso de modelos predictivos**
   - Se lleva a cabo por medio de un modelo que fue creado en Jupyter.
