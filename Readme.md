@@ -103,7 +103,35 @@ El beneficio más importante es la reducción de la barrera de entrada para apre
 
 ### 5. Datos Utilizados
 
-Descripción de los datos...
+Chess Pieces Detection Images Dataset
+Contexto:
+El conjunto de datos "Chess Pieces Detection Images Dataset" de Kaggle es ideal para proyectos de Visión por Computadora o Aprendizaje Profundo Multi-Clase. Este dataset ha sido diseñado para facilitar la detección y clasificación de piezas de ajedrez en imágenes individuales.
+
+Contenido:
+El conjunto de datos está organizado en carpetas, cada una de las cuales lleva el nombre de la pieza de ajedrez correspondiente. Las imágenes contenidas en estas carpetas son imágenes individuales de cada pieza, lo que mantiene el dataset ordenado y fácil de trabajar. Las imágenes que contenían múltiples objetos fueron eliminadas para asegurar la simplicidad del conjunto de datos.
+
+Número total de imágenes: Aproximadamente 700 imágenes (el número exacto puede variar, verifica en el enlace de Kaggle).
+Categorías de piezas de ajedrez incluidas:
+Peón (Pawn)
+Torre (Rook)
+Caballo (Knight)
+Alfil (Bishop)
+Reina (Queen)
+Rey (King)
+Cada categoría tiene un conjunto de imágenes representativas de esa pieza específica, capturadas desde diferentes ángulos y posiciones.
+
+Temática:
+El tema principal del conjunto de datos es la detección y clasificación de piezas de ajedrez. Las imágenes están centradas exclusivamente en las piezas de ajedrez, lo que hace que este dataset sea muy específico y adecuado para entrenar modelos de reconocimiento de imágenes para identificar y clasificar las diferentes piezas en un tablero de ajedrez.
+
+Formato de las imágenes:
+
+Resolución: Varía, pero la mayoría de las imágenes tienen alta calidad y están bien iluminadas.
+Formato: JPEG/PNG (el formato puede variar, verifica en el enlace de Kaggle).
+Inspiración:
+El creador del conjunto de datos es un aficionado al ajedrez y fanático de este juego, quien notó la falta de buenos conjuntos de datos de piezas de ajedrez en Internet. Motivado por esta observación, decidió crear este conjunto de datos para llenar ese vacío y proporcionar una herramienta útil para otros entusiastas del ajedrez y profesionales de la visión por computadora.
+
+Enlace al conjunto de datos:
+Chess Pieces Detection Images Dataset en Kaggle [https://www.kaggle.com/datasets/anshulmehtakaggl/chess-pieces-detection-images-dataset/data]
 
 ### 6. Flujo del proceso de la Solución
 
