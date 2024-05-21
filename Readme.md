@@ -35,7 +35,7 @@ Este trabajo fue realizado por:
 
 |Nombre|Matrícula|Correo
 |-|-|-
-|Horus Ordoñez Bello|214481|horus.act@gmail.com
+|Horus Ordoñez Bello|214481|hordonez.act@gmail.com
 |Javier Castillo Millán|169589|rardeva@yahoo.com
 
 ## Presentación ejecutiva
