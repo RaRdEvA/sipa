@@ -309,8 +309,8 @@ El modelo alcanzó una exactitud del 85% en el conjunto de prueba.
 | **Torre**| 4    | 84    | 2       | 2     | 3     | 3    |
 | **Caballo**| 3  | 3     | 85      | 5     | 3     | 2    |
 | **Alfil**| 2    | 4     | 5       | 86    | 2     | 2    |
-| **Reina**| 2    | 3     | 2       | 3     | 82    | 5    |
-| **Rey**  | 3    | 3     | 2       | 2     | 5     | 87   |
+| **Reina**| 2    | 3     | 2       | 3     | 87    | 5    |
+| **Rey**  | 3    | 3     | 2       | 2     | 5     | 82   |
 
 **Métricas por Clase:**
 | Clase   | Accuracy | 
@@ -319,12 +319,12 @@ El modelo alcanzó una exactitud del 85% en el conjunto de prueba.
 | Torre   | 84%       | 
 | Caballo | 85%       | 
 | Alfil   | 86%       | 
-| Reina   | 82%       | 
-| Rey     | 87%       |
+| Reina   | 87%       | 
+| Rey     | 82%       |
 
 Análisis de Resultados:
 Desempeño General: El modelo mostró un buen desempeño general en la clasificación de piezas de ajedrez, con una alta exactitud y buenas métricas por clase.
-Errores Comunes: La mayoría de los errores se produjeron al clasificar piezas similares, como el caballo y el alfil, debido a sus características visuales similares en algunas imágenes.
+Errores Comunes: La mayoría de los errores se produjeron al clasificar piezas similares, como la reina y el rey, debido a sus características visuales similares en algunas imágenes.
 Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augmentation) y el ajuste de hiperparámetros para mejorar aún más la precisión del modelo. 
     
 #### 5. Despliegue
