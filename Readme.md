@@ -1,11 +1,11 @@
 
-# Sistema Identificador de Piezas de Ajedrez
+# Sistema Identificador de Piezas de Ajedrez (SIPA)
 
 2024-05-07 18:45:03
 
 ## Tabla de Contenido
 
-- [Sistema Identificador de Piezas de Ajedrez](#sistema-identificador-de-piezas-de-ajedrez)
+- [Sistema Identificador de Piezas de Ajedrez (SIPA)](#sistema-identificador-de-piezas-de-ajedrez)
   - [Tabla de Contenido](#tabla-de-contenido)
   - [Equipo](#equipo)
   - [Presentación ejecutiva](#presentación-ejecutiva)
