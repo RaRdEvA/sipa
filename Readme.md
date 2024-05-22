@@ -21,12 +21,20 @@
     - [Cinco preguntas centradas en el cliente](#cinco-preguntas-centradas-en-el-cliente)
     - [Preguntas Frecuentes (FAQ)](#preguntas-frecuentes-faq)
   - [Arquitectura de la solución](#arquitectura-de-la-solución)
+    - [Frontend (Website)](#frontend-website)
+    - [Backend](#backend)
+    - [API](#api)
+    - [Modelo de Deep Learning](#modelo-de-deep-learning)
+    - [Infraestructura](#infraestructura)
+    - [Costos](#costos)
   - [CRISP-DM / Well Architected Machine Learning Lens Componentes](#crisp-dm--well-architected-machine-learning-lens-componentes)
     - [Adquisición y entendimiento de datos](#adquisición-y-entendimiento-de-datos)
     - [Preparación de datos (ETLs a la nube)](#preparación-de-datos-etls-a-la-nube)
-    - [Modelado Deep Learning](#modelado-deep-learning)
+    - [Preprocesamiento de datos](#preprocesamiento-de-datos)
+    - [Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico](#analítica-de-datos-yo-entrenamiento-de-un-modelo-de-machine-learning-o-ajuste-de-un-modelo-estadístico)
+    - [Arquitectura de Red Neuronal](#arquitectura-de-red-neuronal)
     - [Evaluación](#evaluación)
-      - [5. Despliegue](#5-despliegue)
+    - [Despliegue](#despliegue)
   - [Estructura del Repo](#estructura-del-repo)
   - [Referencias](#referencias)
 
@@ -214,32 +222,108 @@ La sección de preguntas frecuentes aborda las inquietudes comunes que pueden su
 
 ![Arquitectura](img/arch.png)
 
+La solución consta de los siguientes elementos
+
+- **Modelo:** Modelo de transfer learning basado en la arquitectura VGG16 para identificar las piezas de ajedrez en las imágenes.
+- **Almacenamiento de Imágenes:** Almacenamiento de las imágenes cargadas por los usuarios para su procesamiento.
+- **Infraestructura:** Servicios en la nube AWS para alojar la aplicación web, el modelo de Deep Learning y la API.
+
+### Frontend (Website)
+
+El frontend es una interfaz web que permite a los usuarios cargar imágenes de piezas de ajedrez y visualizar los resultados del sistema. La interfaz es intuitiva y fácil de usar, con opciones claras para cargar imágenes, ver los resultados y recibir sugerencias de movimientos.
+
+En ella se pueden apreciar los siguientes elementos:
+
+1) Formulario para cargar imágenes.
+2) Sección de resultados con el nombre de la pieza, su descripción, valor y movimiento.
+3) Sugerencias de movimientos para principiantes.
+4) Listado de todas las piezas de ajedrez para permitir al usuario navegar con ellas.
+
+Está realizado en PHP como una única página web "index.php". Al estar hecho en php permite que el sitio web sea interactivo y reutilizar la misma página.
+
+Los cambios de valores se llevan a cabo de forma sencilla por medio de *URL parameters*, indicando el parámetro "piece" para indicar los valores que se muestran.
+
+e.g. en el siguiente URL se indica que la pieza a mostrar es el rey (King):
+
+```html
+http://0.0.0.0/index.php?piece=King
+```
+
+### Backend
+
+El backend es una aplicación web en PHP que recibe las imágenes cargadas por los usuarios, las envía a la API para su procesamiento, recibe los resultados y los muestra en la interfaz web. La aplicación web está alojada en un servidor web y se comunica con la API a través de solicitudes POST.
+
+[upload.php](website/upload.php)
+
+### API
+
+La API es un servicio que recibe las imágenes de piezas de ajedrez, las preprocesa, las envía al modelo de Deep Learning para la inferencia y devuelve los resultados al backend. Está alojada en el servidor y se ejecuta como servicio en python, usando Flask.
+
+[app.py](website/app.py)
+
+### Modelo de Deep Learning
+
+El modelo de Deep Learning es un modelo de transfer learning basado en la arquitectura VGG16. Este modelo fue entrenado con un dataset de imágenes de piezas de ajedrez y es capaz de identificar las 6 piezas de ajedrez. El modelo fue pre-entrenado usando SageMaker y el resultado fue exportado a archivo para poder ponerlo en producción y se accede a través de la API para realizar la inferencia de las imágenes cargadas por los usuarios.
+
+El modelo fue exportado a .keras para poder ser utilizado en la API.
+
+Debido al tamaño del modelo, no se encuentra en el repositorio, pero se puede acceder a él en el siguiente enlace:
+
+[Modelo de Deep Learning](http://34.228.197.184/chess_piece_classifier_01.keras)
+
+### Infraestructura
+
+La infraestructura de la solución utiliza el servicio de AWS [Amazon EC2](https://aws.amazon.com/ec2/), consta de un único servidor web que aloja la aplicación web, la API y el modelo.
+
+El servidor web está configurado por un lado con PHP para la página web y el backend; por otro lado, con Flask para la API.
+
+La infraestructura es escalable y segura, con acceso restringido a los servicios necesarios para el funcionamiento de la solución.
+
+**Características:**
+
+- t2.micro
+- 1 vCPU
+- 1 GiB de RAM
+- 8 GiB de almacenamiento.
+
+### Costos
+
+Dado que el servidor web estará encendido 24/365 decidimos usar esta tecnología y arquitectura porque es muy económica comparada con SageMaker.
+
+Es un costo fijo que ya se asume de 44 USD al año.
+
+Sagemaker en 5 días de estar encendido ascendió a 10USD.
+
+De esta forma aprovechamos la infraestructura existente y evitamos costos variables y adicionales.
+
 ## CRISP-DM / Well Architected Machine Learning Lens Componentes
 
 ### Adquisición y entendimiento de datos
 
 - Se lleva a cabo por medio de la carga de imágenes de piezas de ajedrez.
 - Esto es a través de la página web en la cual el usuario puede cargar la imagen.
-- La imagen es cargada en el servidor y se envía al modelo por medio de una API.
+- La imagen es cargada en el servidor al backend y se envía al  la API; esta última hace un preprocesamiento y después envía al modelo.
+- El modelo genera una inferencia y la envía de regreso por los puntos hasta el frontend para que el usuario pueda ver el resultado.
 
 ### Preparación de datos (ETLs a la nube)
 
 - Se realiza el procesamiento de las imágenes en la nube.
 - Esto se lleva a cabo gracias a una API.
-- **Preprocesamiento de datos**
+
+### Preprocesamiento de datos
+
 - Se hace una conversión de la imagen hacia un vector para enviar por medio de la API al modelo.
 - SageMaker para identificar el nombre de la pieza. Con un modelo de Deep Learning.
 
-### Modelado Deep Learning
+### Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico
 
-- **Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico**
 - Notebook en SageMaker para entrenar el modelo y ponerlo en producción.
 
 El modelo de Deep Learning utilizado para el reconocimiento de imágenes es un modelo de transfer learning basado en la arquitectura VGG16. Este modelo fue entrenado con un dataset de imágenes de piezas de ajedrez y es capaz de identificar las 6 piezas de ajedrez.
 
-Puede consultarse en este vínculo: [chess-pieces-image-classifier.ipynb](../src/chess-pieces-image-classifier.ipynb)
+Puede consultarse en este vínculo: [chess-pieces-image-classifier - OK - SageMaker.ipynb](./model/chess-pieces-image-classifier%20-%20OK%20-%20SageMaker.ipynb)
 
-- **Arquitectura de Red Neuronal**
+### Arquitectura de Red Neuronal
 
 La arquitectura de la red neuronal utilizada para el reconocimiento de imágenes es la siguiente:
 
@@ -307,33 +391,33 @@ _________________________________________________________________
 
 ### Evaluación
 
-División del Conjunto de Datos:
+**División del Conjunto de Datos:**
+
 El conjunto de datos se dividió en dos partes: un conjunto de entrenamiento (80%) y un conjunto de prueba (20%).
 
-Métricas de Evaluación:
-Exactitud (Accuracy): La proporción de predicciones correctas sobre el total de predicciones.
+**Métricas de Evaluación:**
+
+Exactitud (Accuracy): La proporción de inferencias correctas sobre el total de inferencias.
 Matriz de Confusión: Para visualizar el rendimiento del modelo clasificando cada categoría de piezas de ajedrez.
 Precisión (Precision), Recall y F1-Score: Para evaluar el desempeño en cada clase individualmente.
 
-Evaluación en el Conjunto de Prueba:
-Se utilizó el conjunto de prueba para evaluar el modelo entrenado. El modelo realizó predicciones sobre las imágenes del conjunto de prueba y se compararon con las etiquetas reales para calcular las métricas de rendimiento.
-Resultados:
+**Evaluación en el Conjunto de Prueba:**
+
+Se utilizó el conjunto de prueba para evaluar el modelo entrenado. El modelo realizó inferencias sobre las imágenes del conjunto de prueba y se compararon con las etiquetas reales para calcular las métricas de rendimiento.
 
 **Exactitud Global:**
 El modelo alcanzó una exactitud del 85% en el conjunto de prueba.
-
-Claro, aquí tienes el texto con las tablas sin espacios adicionales:
 
 **Matriz de Confusión:**
 
 |Pieza|Peón|Torre|Caballo|Alfil|Reina|Rey
 |-|-|-|-|-|-|-
-|**Peón**|88|5|3|2|2|3
-|**Torre**|4|84|2|2|3|3
-|**Caballo**|3|3|85|5|3|2
-|**Alfil**|2|4|5|86|2|2
-|**Reina**|2|3|2|3|87|5
-|**Rey**|3|3|2|2|5|82
+|Peón|88|5|3|2|2|3
+|Torre|4|84|2|2|3|3
+|Caballo|3|3|85|5|3|2
+|Alfil|2|4|5|86|2|2
+|Reina|2|3|2|3|87|5
+|Rey|3|3|2|2|5|82
 
 **Métricas por Clase:**
 
@@ -352,47 +436,48 @@ Desempeño General: El modelo mostró un buen desempeño general en la clasifica
 Errores Comunes: La mayoría de los errores se produjeron al clasificar piezas similares, como la reina y el rey, debido a sus características visuales similares en algunas imágenes.
 Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augmentation) y el ajuste de hiperparámetros para mejorar aún más la precisión del modelo.
 
-#### 5. Despliegue
+### Despliegue
 
-- **Inferencia de resultados en caso de modelos predictivos**
-  - Se lleva a cabo por medio de un modelo que fue creado en Jupyter.
-  - Este modelo realizad transfer learning para usar una red neuronal preentrenada.
-  - Esta red acelera el entrenamiento y mejora la precisión.
-- **Despliegue**
-  - Realtime endpoint en SageMaker para la inferencia.
-  - API Gateway para consumir el modelo.
-  - Lambda para ejecutar el modelo.
-  - S3 para almacenar las imágenes.
-  - CloudWatch para monitorear el sistema.
-  - IAM para gestionar los permisos.
-- **Mecanismo para consumir el producto de datos**
-  - Interfaces web para cargar las imágenes y visualizar los resultados.
+- Se disponibiliza por medio de la página web al usuario.
+- API en Flask para interactuar entre backend y modelo.
+- Inferencia en tiempo real hacia el sitio web.
 
 ## Estructura del Repo
 
 ```plaintext
 .
-├── .gitingnore
-├── README.md
+├── 5_questions.md
+├── Notes.md
+├── READMEJavi_20240520.md
+├── README_bak.md
+├── Readme.md
+├── arquitectura.drawio
 ├── dataset
 │   └── Chessman-image-dataset.zip
+├── entregables.md
+├── faq.md
+├── faq_tech.md
 ├── img
-│   ├── banner.png
+│   ├── QR.png
 │   ├── arch.png
+│   ├── banner.png
+│   ├── logo.png
+│   ├── moves_Bishop.gif
+│   ├── moves_King.gif
+│   ├── moves_Knight.gif
+│   ├── moves_Pawn.gif
+│   ├── moves_Queen.gif
+│   ├── moves_Rook.gif
+│   ├── process.png
 │   └── storyboard.png
-|     └── imagen_QR
+├── press_release.md
 ├── src
 │   └── chess-pieces-image-classifier - OK - SageMaker.ipynb
-├── website
-│   ├── app.py
-│   ├── index.php
-│   ├── info.php
-│   └── upload.php
-├── press_release.md
-├── 5_questions.md
-├── faq.md
-├── arquitectura.drawio
 ├── storyboard.pptx
+└── website
+    ├── app.py
+    ├── index.php
+    └── upload.php
 
 ```
 
