@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     $ch = curl_init();
 
     // Set the URL and options
-    curl_setopt($ch, CURLOPT_URL, 'http://18.234.214.139:5000/predict');
+    curl_setopt($ch, CURLOPT_URL, 'http://34.228.197.184:5000/predict');
     curl_setopt($ch, CURLOPT_POST, 1);
 
     // Prepare file for upload
