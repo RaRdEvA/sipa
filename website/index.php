@@ -142,7 +142,7 @@ if (isset($_GET['piece']) && array_key_exists($_GET['piece'], $chessPieces)) {
 		<button type="submit">Enviar imagen</button>
         </form>
 	    <?php
-        	echo "<p>Pieza Identificada: " . $piece['nombre'] . "</p>";
+        	# echo "<p>Pieza Identificada: " . $piece['nombre'] . "</p>";
 	    ?>
         <h2>Pieza: <?= $piece['nombre'] ?? 'No especificada' ?></h2>
         <p><strong>Descripción:</strong> <?= $piece['descripcion'] ?? 'No disponible' ?></p>

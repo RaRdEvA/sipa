@@ -11,7 +11,6 @@
   - [Descripción del problema u oportunidad](#descripción-del-problema-u-oportunidad)
   - [Descripción de la solución](#descripción-de-la-solución)
   - [Usuario Final y su beneficio principal con el producto de datos](#usuario-final-y-su-beneficio-principal-con-el-producto-de-datos)
-  - [Arquitectura de la solución](#arquitectura-de-la-solución)
   - [Conjunto de Datos](#conjunto-de-datos)
     - [Chess Pieces Detection Images Dataset](#chess-pieces-detection-images-dataset)
   - [Proceso](#proceso)
@@ -21,11 +20,12 @@
     - [Comunicado de Prensa](#comunicado-de-prensa)
     - [Cinco preguntas centradas en el cliente](#cinco-preguntas-centradas-en-el-cliente)
     - [Preguntas Frecuentes (FAQ)](#preguntas-frecuentes-faq)
-    - [4. CRISP-DM / Well Architected Machine Learning Lens Componentes :](#4-crisp-dm--well-architected-machine-learning-lens-componentes-)
-      - [1. Adquisición y entendimiento de datos](#1-adquisición-y-entendimiento-de-datos)
-      - [2. Preparación de datos (ETLs a la nube)](#2-preparación-de-datos-etls-a-la-nube)
-      - [3. Modelado Deep Learning](#3-modelado-deep-learning)
-      - [4. Evaluación](#4-evaluación)
+  - [Arquitectura de la solución](#arquitectura-de-la-solución)
+  - [CRISP-DM / Well Architected Machine Learning Lens Componentes](#crisp-dm--well-architected-machine-learning-lens-componentes)
+    - [Adquisición y entendimiento de datos](#adquisición-y-entendimiento-de-datos)
+    - [Preparación de datos (ETLs a la nube)](#preparación-de-datos-etls-a-la-nube)
+    - [Modelado Deep Learning](#modelado-deep-learning)
+    - [Evaluación](#evaluación)
       - [5. Despliegue](#5-despliegue)
   - [Estructura del Repo](#estructura-del-repo)
   - [Referencias](#referencias)
@@ -87,10 +87,6 @@ El problema radica en la curva de aprendizaje inicial del ajedrez, que puede ser
 
 ¿Cuál es el beneficio?
 El beneficio más importante es la reducción de la barrera de entrada para aprender y disfrutar del ajedrez. Al proporcionar un medio para identificar rápidamente las piezas y entender sus movimientos y estrategias asociadas, el SIPA fomenta una mayor participación y disfrute del juego, haciendo que los principiantes se sientan más cómodos y confiados.
-
-## Arquitectura de la solución
-
-![Arquitectura](img/arch.png)
 
 ## Conjunto de Datos
 
@@ -190,7 +186,6 @@ O bien, utilizar el siguiente enlace:
 
 [SIPA - Sistema Identificador de Piezas de Ajedrez](http://34.228.197.184/)
 
-
 ## Working Backwards
 
 El enfoque "Working Backwards" es una metodología utilizada para asegurar que el desarrollo de productos esté alineado con las necesidades y expectativas de los clientes. Consiste en trabajar desde el resultado final deseado hacia atrás, asegurando que cada paso del proceso de desarrollo esté claramente definido y orientado hacia la satisfacción del usuario.
@@ -215,30 +210,37 @@ La sección de preguntas frecuentes aborda las inquietudes comunes que pueden su
 
 [Preguntas Frecuentes (FAQ).](faq.md)
 
-### 4. CRISP-DM / Well Architected Machine Learning Lens Componentes :
+## Arquitectura de la solución
 
-#### 1. Adquisición y entendimiento de datos
-  - Se lleva a cabo por medio de la carga de imágenes de piezas de ajedrez.
-  - Esto es a través de la página web en la cual el usuario puede cargar la imagen.
-  - La imagen es cargada en el servidor y se envía al modelo por medio de una API.
-#### 2. Preparación de datos (ETLs a la nube)
-  - Se realiza el procesamiento de las imágenes en la nube.
-  - Esto se lleva a cabo gracias a una API.
+![Arquitectura](img/arch.png)
+
+## CRISP-DM / Well Architected Machine Learning Lens Componentes
+
+### Adquisición y entendimiento de datos
+
+- Se lleva a cabo por medio de la carga de imágenes de piezas de ajedrez.
+- Esto es a través de la página web en la cual el usuario puede cargar la imagen.
+- La imagen es cargada en el servidor y se envía al modelo por medio de una API.
+
+### Preparación de datos (ETLs a la nube)
+
+- Se realiza el procesamiento de las imágenes en la nube.
+- Esto se lleva a cabo gracias a una API.
 - **Preprocesamiento de datos**
-  - Se hace una conversión de la imagen hacia un vector para enviar por medio de la API al modelo.
-  - SageMaker para identificar el nombre de la pieza. Con un modelo de Deep Learning.
+- Se hace una conversión de la imagen hacia un vector para enviar por medio de la API al modelo.
+- SageMaker para identificar el nombre de la pieza. Con un modelo de Deep Learning.
 
-#### 3. Modelado Deep Learning
+### Modelado Deep Learning
 
 - **Analítica de datos y/o entrenamiento de un modelo de Machine Learning o ajuste de un modelo Estadístico**
-  - Notebook en SageMaker para entrenar el modelo y ponerlo en producción.
-
+- Notebook en SageMaker para entrenar el modelo y ponerlo en producción.
 
 El modelo de Deep Learning utilizado para el reconocimiento de imágenes es un modelo de transfer learning basado en la arquitectura VGG16. Este modelo fue entrenado con un dataset de imágenes de piezas de ajedrez y es capaz de identificar las 6 piezas de ajedrez.
 
 Puede consultarse en este vínculo: [chess-pieces-image-classifier.ipynb](../src/chess-pieces-image-classifier.ipynb)
 
 - **Arquitectura de Red Neuronal**
+
 La arquitectura de la red neuronal utilizada para el reconocimiento de imágenes es la siguiente:
 
 ```plaintext
@@ -302,7 +304,8 @@ Trainable params: 12912006 (49.26 MB)
 Non-trainable params: 14714688 (56.13 MB)
 _________________________________________________________________
 ```
-#### 4. Evaluación
+
+### Evaluación
 
 División del Conjunto de Datos:
 El conjunto de datos se dividió en dos partes: un conjunto de entrenamiento (80%) y un conjunto de prueba (20%).
@@ -319,31 +322,36 @@ Resultados:
 **Exactitud Global:**
 El modelo alcanzó una exactitud del 85% en el conjunto de prueba.
 
+Claro, aquí tienes el texto con las tablas sin espacios adicionales:
+
 **Matriz de Confusión:**
-|          | Peón | Torre | Caballo | Alfil | Reina | Rey  |
-|----------|------|-------|---------|-------|-------|------|
-| **Peón** | 88   | 5     | 3       | 2     | 2     | 3    |
-| **Torre**| 4    | 84    | 2       | 2     | 3     | 3    |
-| **Caballo**| 3  | 3     | 85      | 5     | 3     | 2    |
-| **Alfil**| 2    | 4     | 5       | 86    | 2     | 2    |
-| **Reina**| 2    | 3     | 2       | 3     | 87    | 5    |
-| **Rey**  | 3    | 3     | 2       | 2     | 5     | 82   |
+
+|Pieza|Peón|Torre|Caballo|Alfil|Reina|Rey
+|-|-|-|-|-|-|-
+|**Peón**|88|5|3|2|2|3
+|**Torre**|4|84|2|2|3|3
+|**Caballo**|3|3|85|5|3|2
+|**Alfil**|2|4|5|86|2|2
+|**Reina**|2|3|2|3|87|5
+|**Rey**|3|3|2|2|5|82
 
 **Métricas por Clase:**
-| Clase   | Accuracy | 
-|---------|-----------|
-| Peón    | 88%       | 
-| Torre   | 84%       | 
-| Caballo | 85%       | 
-| Alfil   | 86%       | 
-| Reina   | 87%       | 
-| Rey     | 82%       |
 
-Análisis de Resultados:
+|Clase|Accuracy
+|-|-
+|Peón|88%
+|Torre|84%
+|Caballo|85%
+|Alfil|86%
+|Reina|87%
+|Rey|82%
+
+**Análisis de Resultados:**
+
 Desempeño General: El modelo mostró un buen desempeño general en la clasificación de piezas de ajedrez, con una alta exactitud y buenas métricas por clase.
 Errores Comunes: La mayoría de los errores se produjeron al clasificar piezas similares, como la reina y el rey, debido a sus características visuales similares en algunas imágenes.
-Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augmentation) y el ajuste de hiperparámetros para mejorar aún más la precisión del modelo. 
-    
+Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augmentation) y el ajuste de hiperparámetros para mejorar aún más la precisión del modelo.
+
 #### 5. Despliegue
 
 - **Inferencia de resultados en caso de modelos predictivos**
@@ -359,7 +367,6 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
   - IAM para gestionar los permisos.
 - **Mecanismo para consumir el producto de datos**
   - Interfaces web para cargar las imágenes y visualizar los resultados.
-
 
 ## Estructura del Repo
 
@@ -400,7 +407,3 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
 - [Chess Piece Classifier](https://github.com/DenverCoder1/chess-piece-classifier?)
 - [Image classification with TensorFlow Lite Model Maker](https://www.tensorflow.org/lite/models/modify/model_maker/image_classification)
 - [Chess Pieces Image Classifier| VGG16 | KFold ♟️](https://www.kaggle.com/code/amankumar234/chess-pieces-image-classifier-vgg16-kfold/notebook)
-
-[def]: #proceso
-[def2]: #referencias
-[def3]: #4-despliegue
