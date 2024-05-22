@@ -21,6 +21,9 @@ src/pre-trained-imagenet.ipynb
 # Assets
 assets/
 
+# Presentaciones
+*.pptx
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -36,6 +36,7 @@
     - [Evaluación](#evaluación)
     - [Despliegue](#despliegue)
   - [Estructura del Repo](#estructura-del-repo)
+  - [Presentación Ejecutiva](#presentación-ejecutiva)
   - [Referencias](#referencias)
 
 ## Equipo
@@ -479,6 +480,21 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
 
 5 directories, 26 files
 ```
+
+## Presentación Ejecutiva
+
+La presentación ejecutiva desarrollada para este proyecto describe la solución de forma concisa y visual, incluyendo los siguientes puntos:
+
+- Descripción del Problema u oportunidad.
+- Descripción de la solución.
+- Usuario Final y su beneficio principal con el producto de datos
+- Arquitectura de la solución
+- Datos Uyilizados
+- Demo de la Solución
+
+ Se encuentra en el siguiente enlace:
+
+ [Presentación Ejecutiva](presentacion_ejecutiva.pdf)
 
 ## Referencias
 
