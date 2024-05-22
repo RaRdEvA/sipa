@@ -469,6 +469,7 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
 │   ├── moves_Rook.gif
 │   ├── process.png
 │   └── storyboard.png
+├── presentacion_ejecutiva.pdf
 ├── press_release.md
 ├── src
 │   └── chess-pieces-image-classifier - OK - SageMaker.ipynb
@@ -478,7 +479,7 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
     ├── index.php
     └── upload.php
 
-5 directories, 26 files
+5 directories, 27 files
 ```
 
 ## Presentación Ejecutiva
