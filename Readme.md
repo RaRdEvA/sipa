@@ -448,8 +448,6 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
 .
 ├── 5_questions.md
 ├── Notes.md
-├── READMEJavi_20240520.md
-├── README_bak.md
 ├── Readme.md
 ├── arquitectura.drawio
 ├── dataset
@@ -479,6 +477,7 @@ Mejoras Futuras: Se podrían considerar técnicas de aumento de datos (data augm
     ├── index.php
     └── upload.php
 
+5 directories, 26 files
 ```
 
 ## Referencias
